@@ -54,7 +54,7 @@ const UserProfile = () => {
         const formData = new FormData()
         formData.append('file', file)
         formData.append('email', user.email)
-        fetch('http://localhost:4000/user/uploadprofilepicture',{
+        fetch('https://mern-stack-backend-xzfl.onrender.com/user/uploadprofilepicture',{
             method:'POST',
             body: formData
         })
@@ -92,7 +92,7 @@ const UserProfile = () => {
 
         const token = window.localStorage.getItem("token");
 
-        await fetch("http://localhost:4000/user/getuser", {
+        await fetch("https://mern-stack-backend-xzfl.onrender.com/user/getuser", {
             method: "GET",
             headers: {
                 "Content-type": "application/json",
@@ -109,7 +109,7 @@ const UserProfile = () => {
         handleshowEditClose(false)
         edituserdetails = { ...editUserDetails, id: user._id }
         console.log(editUserDetails);
-        fetch('http://localhost:4000/user/updateuser', {
+        fetch('https://mern-stack-backend-xzfl.onrender.com/user/updateuser', {
             method: "POST",
             headers: {
                 "Content-type": "application/json",

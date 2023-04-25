@@ -15,7 +15,7 @@ const Right = () =>{
     const filters = useSelector(state => state.filters)
 
     const searchbuses = () => {
-        fetch('http://localhost:4000/buses/search',{
+        fetch('https://mern-stack-backend-xzfl.onrender.com/buses/search',{
         method: 'POST',
         mode: 'cors',
         headers: {

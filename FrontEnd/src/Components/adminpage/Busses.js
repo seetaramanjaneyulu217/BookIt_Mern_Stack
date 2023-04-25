@@ -750,7 +750,7 @@ const BussesList = () => {
 
   const add_bus = () => {
     console.log(busDetails);
-    fetch("http://localhost:4000/buses/insert", {
+    fetch("https://mern-stack-backend-xzfl.onrender.com/buses/insert", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -782,7 +782,7 @@ const BussesList = () => {
   };
 
   const delete_bus = (row) => {
-    fetch("http://localhost:4000/admin/delete_bus", {
+    fetch("https://mern-stack-backend-xzfl.onrender.com/admin/delete_bus", {
       method: "POST",
       mode: "cors",
       headers: {
@@ -815,7 +815,7 @@ const BussesList = () => {
 
   const edit_bus = () => {
     axios
-      .put(`http://localhost:4000/admin/edit_bus/${editBusDetails._id}`, {
+      .put(`https://mern-stack-backend-xzfl.onrender.com/admin/edit_bus/${editBusDetails._id}`, {
         editBusDetails: editBusDetails,
       })
       .then((res) => {
@@ -842,7 +842,7 @@ const BussesList = () => {
   };
 
   const fetchBusses = () => {
-    fetch("http://localhost:4000/admin/fetch_busses", {
+    fetch("https://mern-stack-backend-xzfl.onrender.com/admin/fetch_busses", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

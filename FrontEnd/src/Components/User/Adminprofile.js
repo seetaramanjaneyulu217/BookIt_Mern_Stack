@@ -57,7 +57,7 @@ const Adminprofile = () => {
       formData.append("file", file);
       console.log(file);
       formData.append("email", user.email);
-      fetch("http://localhost:4000/user/uploadprofilepicture", {
+      fetch("https://mern-stack-backend-xzfl.onrender.com/user/uploadprofilepicture", {
         method: "POST",
         body: formData,
       });
@@ -93,7 +93,7 @@ const Adminprofile = () => {
     const getDetails = async () => {
       const token = window.localStorage.getItem("admintoken");
   
-      await fetch("http://localhost:4000/user/getadmin", {
+      await fetch("https://mern-stack-backend-xzfl.onrender.com/user/getadmin", {
         method: "GET",
         headers: {
           "Content-type": "application/json",
@@ -111,7 +111,7 @@ const Adminprofile = () => {
       handleshowEditClose(false);
       edituserdetails = { ...editUserDetails, id: user._id };
       console.log(editUserDetails);
-      fetch("http://localhost:4000/user/updateuser", {
+      fetch("https://mern-stack-backend-xzfl.onrender.com/user/updateuser", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

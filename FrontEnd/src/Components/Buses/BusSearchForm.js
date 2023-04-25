@@ -32,7 +32,7 @@ const BusSearchForm = () => {
 
     const token = window.localStorage.getItem("token")
 
-    await fetch("http://localhost:4000/user/getuser", {
+    await fetch("https://mern-stack-backend-xzfl.onrender.com/user/getuser", {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -61,7 +61,7 @@ const BusSearchForm = () => {
     }
 
     if (user) {
-      axios.post('http://localhost:4000/user/insertrecentsearches', { user, travelDetails })
+      axios.post('https://mern-stack-backend-xzfl.onrender.com/user/insertrecentsearches', { user, travelDetails })
         .then(res => {
           console.log(res.data)
         })

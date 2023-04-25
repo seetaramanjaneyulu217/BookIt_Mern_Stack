@@ -31,7 +31,7 @@ const ForgotPassword = () => {
         user = { ...user, password: password.current.value }
         user = { ...user, confirmpassword: confirmpassword.current.value }
 
-        fetch('http://localhost:4000/user/changepassword', {
+        fetch('https://mern-stack-backend-xzfl.onrender.com/user/changepassword', {
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -105,7 +105,7 @@ const ForgotPassword = () => {
 
         user = { ...user, email: email.current.value }
 
-        await fetch('http://localhost:4000/user/sendOTPforpasswordchange', {
+        await fetch('https://mern-stack-backend-xzfl.onrender.com/user/sendOTPforpasswordchange', {
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -129,7 +129,7 @@ const ForgotPassword = () => {
             OTP += code.value
         })
 
-        await fetch("http://localhost:4000/user//verifyOTPforpasswordchange", {
+        await fetch("https://mern-stack-backend-xzfl.onrender.com/user//verifyOTPforpasswordchange", {
             method: "POST",
             mode: "cors",
             headers: {
@@ -173,7 +173,7 @@ const ForgotPassword = () => {
 
         setLoading(true)
 
-        await fetch('http://localhost:4000/user/sendOTPforpasswordchange', {
+        await fetch('https://mern-stack-backend-xzfl.onrender.com/user/sendOTPforpasswordchange', {
             method: 'POST',
             mode: "cors",
             headers: {

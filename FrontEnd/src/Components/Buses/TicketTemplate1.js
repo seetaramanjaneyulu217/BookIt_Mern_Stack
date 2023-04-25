@@ -152,7 +152,7 @@ const TicketTemplate1 = ({ bus, p1 }) => {
       order_id: data.id,
       handler: async (response) => {
         try {
-          const verifyUrl = "http://localhost:4000/api/payment/verify";
+          const verifyUrl = "https://mern-stack-backend-xzfl.onrender.com/api/payment/verify";
           const data = await axios.post(verifyUrl, response);
           console.log("------------------------------------------");
           message = data.data.message
@@ -162,7 +162,7 @@ const TicketTemplate1 = ({ bus, p1 }) => {
             console.log('i am inside if')
             console.log(selected)
               axios
-              .post("http://localhost:4000/api/payment/confirm", {
+              .post("https://mern-stack-backend-xzfl.onrender.com/api/payment/confirm", {
                 selectedSeats: selected,
                 busid: bus._id,
               })
@@ -201,7 +201,7 @@ const TicketTemplate1 = ({ bus, p1 }) => {
 
   const handlepayment = async () => {
     try {
-      const orderUrl = "http://localhost:4000/api/payment/orders";
+      const orderUrl = "https://mern-stack-backend-xzfl.onrender.com/api/payment/orders";
 
       const { data } = await axios.post(orderUrl, { amount: total });
       console.log(data);

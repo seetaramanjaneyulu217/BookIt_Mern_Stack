@@ -17,7 +17,7 @@ const Admin = () => {
   let users_count = useSelector((state) => state.usersCount);
 
   axios
-    .get("http://localhost:4000/admin/fetch_users_count")
+    .get("https://mern-stack-backend-xzfl.onrender.com/admin/fetch_users_count")
     .then((res) => {
       dispatch({ type: "usersCount", payload: res.data.users_count });
     })
@@ -26,7 +26,7 @@ const Admin = () => {
     });
 
   axios
-    .get("http://localhost:4000/admin/fetch_buses_count")
+    .get("https://mern-stack-backend-xzfl.onrender.com/admin/fetch_buses_count")
     .then((res) => {
       dispatch({ type: "busesCount", payload: res.data.buses_count });
     })
@@ -46,7 +46,7 @@ const Admin = () => {
   const getDetails = async () => {
     const token = window.localStorage.getItem("admintoken");
 
-    await fetch("http://localhost:4000/user/getadmin", {
+    await fetch("https://mern-stack-backend-xzfl.onrender.com/user/getadmin", {
       method: "GET",
       headers: {
         "Content-type": "application/json",

@@ -54,7 +54,7 @@ const Userlist = () => {
 
   const delete_user = (row) => {
     axios
-      .post("http://localhost:4000/admin/delete_user", {
+      .post("https://mern-stack-backend-xzfl.onrender.com/admin/delete_user", {
         email: row.email,
       })
       .then((res) => {
@@ -87,7 +87,7 @@ const Userlist = () => {
 
   const getUsers = () => {
     axios
-      .get("http://localhost:4000/admin/fetch_users")
+      .get("https://mern-stack-backend-xzfl.onrender.com/admin/fetch_users")
       .then((res) => {
         setUsers_data(res.data);
       })

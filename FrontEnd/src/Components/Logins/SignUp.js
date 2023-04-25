@@ -55,7 +55,7 @@ const SignUp = () => {
 
     setLoading(true);
 
-    await fetch("http://localhost:4000/user/sendOTP", {
+    await fetch("https://mern-stack-backend-xzfl.onrender.com/user/sendOTP", {
       method: "POST",
       mode: "cors",
       headers: {
