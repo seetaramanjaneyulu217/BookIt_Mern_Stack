@@ -136,7 +136,7 @@ class SeatsSeat extends React.Component {
       if(x.length > 0){
       localStorage.setItem('selected',x)
       localStorage.setItem('Bus',JSON.stringify(y))
-      window.location.href = "http://https://mern-stack-backend-xzfl.onrender.com/busticket"
+      window.location.href = "https://mern-stack-backend-xzfl.onrender.com/busticket"
       // this.props.navigation.navigate('busticket')  
       }
     }
